@@ -35,11 +35,19 @@
             Console.WriteLine("Enter the number of steps:");
             int numSteps = int.Parse(Console.ReadLine());
             for (int i = 0; i < numSteps; i++)
-{
+            {
             Console.WriteLine($"Enter step {i + 1}:");
             string step = Console.ReadLine();
             recipe.AddStep(step);
-}
+            }
+
+            // Scaling the recipe.
+            Console.WriteLine("Enter the scaling factor (0.5 for half, 2 for double, 3 for triple):");
+            double factor = double.Parse(Console.ReadLine());
+            recipe.ScaleQuantities(factor);
+
+
+        
       }
     }
  }
