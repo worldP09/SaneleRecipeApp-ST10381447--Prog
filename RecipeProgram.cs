@@ -16,47 +16,59 @@
         }else if(choice !='A'){
             Console.WriteLine("Thanks, Take first step.");
         }
-        //give the user a choice to enter the number of recipes. 
-            Console.WriteLine("Enter the number of ingredients:");
-        int numIngredients = int.Parse(Console.ReadLine());
-        for (int i = 0; i < numIngredients; i++)
-            {
-                Console.WriteLine($"Enter ingredient {i + 1} name:");
-                string name = Console.ReadLine();
-                Console.WriteLine($"Enter ingredient {i + 1} quantity:");
-                double quantity = double.Parse(Console.ReadLine());
-                Console.WriteLine($"Enter ingredient {i + 1} unit:");
-                string unit = Console.ReadLine();
+            Recipe recipe = new Recipe();
 
-                recipe.AddIngredient(name, quantity, unit);
-            }
+    // User input for ingredients.
+    Console.WriteLine("Enter the number of ingredients:");
+    int numIngredients = int.Parse(Console.ReadLine());
+    for (int i = 0; i < numIngredients; i++)
+    {
+        Console.WriteLine($"Enter ingredient {i + 1} name:");
+        string name = Console.ReadLine();
+        Console.WriteLine($"Enter ingredient {i + 1} quantity:");
+        double quantity = double.Parse(Console.ReadLine());
+        Console.WriteLine($"Enter ingredient {i + 1} unit:");
+        string unit = Console.ReadLine();
 
-            // User input for steps.
-            Console.WriteLine("Enter the number of steps:");
-            int numSteps = int.Parse(Console.ReadLine());
-            for (int i = 0; i < numSteps; i++)
-            {
-            Console.WriteLine($"Enter step {i + 1}:");
-            string step = Console.ReadLine();
-            recipe.AddStep(step);
-            }
-
-            // Scaling the recipe.
-            Console.WriteLine("Enter the scaling factor (0.5 for half, 2 for double, 3 for triple):");
-            double factor = double.Parse(Console.ReadLine());
-            recipe.ScaleQuantities(factor);
-
-            // Display the scaled recipe.
-            recipe.DisplayRecipe();
-
-            // Resetting the recipe quantities to original.
-            Console.WriteLine("Would you like to reset the quantities to original? (yes/no)");
-            string resetChoice = Console.ReadLine().ToLower();
-            if (resetChoice == "yes")
-            {
-            recipe.ResetQuantities();
-            recipe.DisplayRecipe();
-        
-      }
+        recipe.AddIngredient(name, quantity, unit);
     }
- }
+
+    // User input for steps.
+    Console.WriteLine("Enter the number of steps:");
+    int numSteps = int.Parse(Console.ReadLine());
+    for (int i = 0; i < numSteps; i++)
+    {
+        Console.WriteLine($"Enter step {i + 1}:");
+        string step = Console.ReadLine();
+        recipe.AddStep(step);
+    }
+
+    // Scaling the recipe.
+    Console.WriteLine("Enter the scaling factor (0.5 for half, 2 for double, 3 for triple):");
+    double factor = double.Parse(Console.ReadLine());
+    recipe.ScaleQuantities(factor);
+
+    // Display the scaled recipe.
+    recipe.DisplayRecipe();
+
+    // Resetting the recipe quantities to original.
+    Console.WriteLine("Would you like to reset the quantities to original? (yes/no)");
+    string resetChoice = Console.ReadLine().ToLower();
+    if (resetChoice == "yes")
+    {
+        recipe.ResetQuantities();
+        recipe.DisplayRecipe();
+    }
+
+    // Clearing the recipe data.
+    Console.WriteLine("Would you like to clear the recipe to start a new one? (yes/no)");
+    string clearChoice = Console.ReadLine().ToLower();
+    if (clearChoice == "yes")
+    {
+        recipe.ClearRecipe();
+    }
+
+    
+}
+}
+}
