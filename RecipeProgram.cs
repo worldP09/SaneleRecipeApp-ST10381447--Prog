@@ -46,7 +46,16 @@
             double factor = double.Parse(Console.ReadLine());
             recipe.ScaleQuantities(factor);
 
+            // Display the scaled recipe.
+            recipe.DisplayRecipe();
 
+            // Resetting the recipe quantities to original.
+            Console.WriteLine("Would you like to reset the quantities to original? (yes/no)");
+            string resetChoice = Console.ReadLine().ToLower();
+            if (resetChoice == "yes")
+            {
+            recipe.ResetQuantities();
+            recipe.DisplayRecipe();
         
       }
     }
