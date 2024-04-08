@@ -30,6 +30,16 @@
 
                 recipe.AddIngredient(name, quantity, unit);
             }
+
+            // User input for steps.
+            Console.WriteLine("Enter the number of steps:");
+            int numSteps = int.Parse(Console.ReadLine());
+            for (int i = 0; i < numSteps; i++)
+{
+            Console.WriteLine($"Enter step {i + 1}:");
+            string step = Console.ReadLine();
+            recipe.AddStep(step);
+}
       }
     }
  }
