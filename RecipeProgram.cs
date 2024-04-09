@@ -134,7 +134,7 @@ class Recipe
                     string name = Console.ReadLine();
                     Console.WriteLine($"Enter ingredient {i + 1} quantity:");
                     double quantity = double.Parse(Console.ReadLine());
-                    Console.WriteLine($"Enter ingredient {i + 1} unit:");
+                    Console.WriteLine($"Enter ingredient {i + 1} measured with( Tsp / cup):");
                     string unit = Console.ReadLine();
 
                     recipe.AddIngredient(name, quantity, unit);
