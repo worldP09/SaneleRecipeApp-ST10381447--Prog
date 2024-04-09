@@ -66,6 +66,26 @@ class Recipe
         }
 
     }
+    public void DisplayRecipe(){
+        try{
+            // display ingredients
+            Console.WriteLine("Ingredients: ");
+            foreach(string ingrediate in ingredients){
+                Console.WriteLine(ingrediate);
+            }
+
+            // display steps
+            Console.WriteLine("\nSteps:");
+            for(int i = 0; i < steps.Length; 1++)
+            {
+                Console.WriteLine($"{i + 1}. {steps[i]}");
+            }
+
+        }
+        catch(Exception ex) {
+             Console.WriteLine($"Error resetting quantities: {ex.Message}"); 
+        }
+    }
 }
 
 
