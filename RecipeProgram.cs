@@ -95,16 +95,15 @@ class Recipe
             steps = new string[0];
         }
         catch{
-             Console.WriteLine($"Error clearing recipe: {ex.Message}"); 
+             Console.WriteLine($"Error resetting recipe: {ex.Message}"); 
         }
     }
 }
 
 
 
-
- namespace RecipeProgram 
- {
+ 
+ 
     class Program
     {
       static void Main(string[] args)
