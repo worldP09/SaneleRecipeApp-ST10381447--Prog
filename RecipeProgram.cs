@@ -21,7 +21,13 @@ class Recipe
             ingredients[ingredients.Length - 1] = $"{quantity} {unit} of {name} ";
 
         }
-        catch(Exception)
+        catch(Exception ex) {
+            Console.WriteLine($"Error adding ingredient: {ex.Message}");
+        }
+    }
+    public void AddStep(string step)
+    {
+        tr
     }
 }
 
