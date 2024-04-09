@@ -14,6 +14,11 @@ class Recipe
 
     }
     public void AddIngredient(string name, double quantities,string unit)
+    {
+        try{
+            //
+        }
+    }
 }
 
 
