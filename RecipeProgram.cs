@@ -83,7 +83,19 @@ class Recipe
 
         }
         catch(Exception ex) {
-             Console.WriteLine($"Error resetting quantities: {ex.Message}"); 
+             Console.WriteLine($"Error displaying steps: {ex.Message}"); 
+        }
+    }
+    public void ClearRecipe()
+
+    {
+        try{
+            //Clear all data
+            ingredients = new string[0];
+            steps = new string[0];
+        }
+        catch{
+             Console.WriteLine($"Error clearing recipe: {ex.Message}"); 
         }
     }
 }
