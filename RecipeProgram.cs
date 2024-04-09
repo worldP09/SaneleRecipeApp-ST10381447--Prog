@@ -2,7 +2,9 @@ using System;
 
 class Recipe
 {
-    private string
+    private string[] igredients;
+    private string[] steps;
+    private double[] originalQuantities;
 }
 
 
