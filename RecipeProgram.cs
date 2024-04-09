@@ -2,7 +2,7 @@ using System;
 
 class Recipe
 {
-    private string[] igredients;
+    private string[] ingredients;
     private string[] steps;
     private double[] originalQuantities;
 
@@ -18,8 +18,10 @@ class Recipe
         try{
             // Add new ingredient to the arrays 
             Array.Resize(ref igredients, igredients.Length + 1);
-            
+            ingredients[ingredients.Length - 1] = $"{quantity} {unit} of {name} ";
+
         }
+        catch(Exception)
     }
 }
 
