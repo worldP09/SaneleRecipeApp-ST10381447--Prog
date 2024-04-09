@@ -16,7 +16,9 @@ class Recipe
     public void AddIngredient(string name, double quantities,string unit)
     {
         try{
-            //
+            // Add new ingredient to the arrays 
+            Array.Resize(ref igredients, igredients.Length + 1);
+            
         }
     }
 }
