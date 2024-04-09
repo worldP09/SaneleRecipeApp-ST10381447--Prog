@@ -9,7 +9,8 @@ class Recipe
     public Recipe()
     {
         // arrays to store ingrediates and steps
-        
+        igredients = new string[0];
+        steps = new string[0];
     }
 }
 
