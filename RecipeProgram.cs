@@ -43,7 +43,12 @@ class Recipe
     public void ScaleQuantities(double factor)
     {
         try{
-            
+            // store Original quantities for reset
+            originalQuantities = new double[igredients.Length];
+            for(int i = 0; i < originalQuantities.Length; i++)
+            {
+                string[]
+            }
         }
     }
 }
