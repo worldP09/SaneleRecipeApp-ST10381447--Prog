@@ -27,7 +27,24 @@ class Recipe
     }
     public void AddStep(string step)
     {
-        tr
+        try {
+
+            //add new step to the array
+            Array.Resize(ref steps, steps.Length + 1);
+            steps[steps.Length - 1] = step;
+
+        }
+        catch (Exception ex) {
+            Console.WriteLine ($"Error adding step: {ex.Message}");
+
+        }
+
+    }
+    public void ScaleQuantities(double factor)
+    {
+        try{
+            
+        }
     }
 }
 
