@@ -11,7 +11,9 @@ class Recipe
         // arrays to store ingrediates and steps
         igredients = new string[0];
         steps = new string[0];
+
     }
+    public void AddIngredient(string name, double quantities,string unit)
 }
 
 
