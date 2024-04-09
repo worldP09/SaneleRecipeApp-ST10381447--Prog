@@ -13,7 +13,7 @@ class Recipe
         steps = new string[0];
 
     }
-    public void AddIngredient(string name, double quantities,string unit)
+    public void AddIngredient(string name, double quantity,string unit)
     {
         try{
             // Add new ingredient to the arrays 
