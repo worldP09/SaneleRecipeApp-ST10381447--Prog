@@ -103,11 +103,11 @@ class Recipe
 
 
  
- 
     class Program
     {
       static void Main(string[] args)
-      {
+      { 
+        try {
         // welcoming message 
         Console.WriteLine("Hello!! welcome to Recipe App! \n(press A to get started and press x to exit)");
         
@@ -118,11 +118,11 @@ class Recipe
             Console.WriteLine("Bye!!");
             break;
         }else if(choice !='A'){
-            Console.WriteLine("Thanks, Take first step.");
+            Console.WriteLine("");
         }
             Recipe recipe = new Recipe();
 
-    // User input for ingredients.
+    // User input for recipe details.
     Console.WriteLine("Enter the number of ingredients:");
     int numIngredients = int.Parse(Console.ReadLine());
     for (int i = 0; i < numIngredients; i++)
@@ -172,7 +172,13 @@ class Recipe
         recipe.ClearRecipe();
     }
 
-    
+        }catch{
+                    catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+    }
 }
+
 }
-}
+
