@@ -47,9 +47,24 @@ class Recipe
             originalQuantities = new double[igredients.Length];
             for(int i = 0; i < originalQuantities.Length; i++)
             {
-                string[]
+                string[] parts = ingredients[i].Split(' ');
+                double.TryParse(parts[0], out double quantity);
+
+                //scale the quantity by factor
+                quantity *=factor;
+
+                //update ingredient string with scaled quantity
+                ingredients[i] = $"{quantity} {string.Join(" ", parts[1..])}";
+
+                // store original quantity for resetting 
+                originalQuantities[i] = quantity / factor;
             }
+            
         }
+        catch (Exception ex) {
+            Console.WriteLine($"Error resetting quantities: {ex.Message}"); 
+        }
+
     }
 }
 
