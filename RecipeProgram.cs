@@ -5,6 +5,11 @@ class Recipe
     private string[] igredients;
     private string[] steps;
     private double[] originalQuantities;
+
+    public Recipe()
+    {
+        // arrays to store ingrediates and steps
+    }
 }
 
 
