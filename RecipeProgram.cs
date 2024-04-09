@@ -9,7 +9,7 @@ class Recipe
     public Recipe()
     {
         // arrays to store ingrediates and steps
-        igredients = new string[0];
+        ingredients = new string[0];
         steps = new string[0];
 
     }
@@ -17,7 +17,7 @@ class Recipe
     {
         try{
             // Add new ingredient to the arrays 
-            Array.Resize(ref igredients, igredients.Length + 1);
+            Array.Resize(ref ingredients, ingredients.Length + 1);
             ingredients[ingredients.Length - 1] = $"{quantity} {unit} of {name} ";
 
         }
@@ -94,7 +94,7 @@ class Recipe
             ingredients = new string[0];
             steps = new string[0];
         }
-        catch{
+        catch (Exception ex){
              Console.WriteLine($"Error resetting recipe: {ex.Message}"); 
         }
     }
